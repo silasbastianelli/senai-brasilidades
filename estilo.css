@@ -1,0 +1,421 @@
+/* Definições de Cores e Reset Básico */
+:root {
+    --color-dark-green: #215147;
+    --color-orange: #F09A32;
+    --color-medium-green: #3E7364;
+    --color-light-cream: #F8F2E7;
+    --color-white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif; /* Considere usar uma fonte que combine mais com a identidade visual se puder! */
+}
+
+body {
+    background-color: var(--color-light-cream); /* Fundo da página */
+    line-height: 1.6;
+    color: var(--color-dark-green);
+}
+
+#borda{
+    background-repeat: repeat-x;
+}
+
+/* ------------------ Header (Cabeçalho) ------------------ */
+
+header {
+    background-color: var(--color-dark-green);
+    color: var(--color-white);
+    padding: 20px 0;
+    /* Imagem de fundo do banner foi definida no HTML embutido */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    position: fixed; /* Define a posição como fixa em relação à janela do navegador */
+    width: 100%;     /* Garante que ele ocupe toda a largura */
+    top: 0;          /* Cola ele no topo da tela */
+    z-index: 1000;   /* Garante que ele fique acima de todos os outros elementos */
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    line-height: 1;
+}
+
+header h1 .sub-title {
+    display: block;
+    font-size: 0.4em;
+    font-weight: normal;
+    letter-spacing: 1px;
+    color: var(--color-orange);
+    margin-bottom: 5px;
+}
+
+header h1 .eye-icon {
+    color: var(--color-orange);
+    font-size: 0.8em;
+    margin: 0 5px;
+}
+
+header nav a {
+    color: var(--color-white);
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+    transition: color 0.3s;
+    border-bottom: 2px solid transparent; /* Para o efeito hover */
+    padding-bottom: 2px;
+}
+
+header nav a:hover {
+    color: var(--color-orange);
+    border-color: var(--color-orange);
+}
+
+/* ------------------ Main (Conteúdo Principal) ------------------ */
+
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    background-color: var(--color-light-cream); /* Cor de fundo mais clara */
+}
+
+main h2 {
+    text-align: center;
+    font-size: 2em;
+    color: var(--color-dark-green);
+    margin-bottom: 40px;
+    border-bottom: 3px solid var(--color-orange);
+    display: inline-block;
+    padding-bottom: 10px;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+section{
+    /* margin-top: 500px; */
+    margin-bottom: 70px;
+}
+
+
+#imagem-grande .banner-inicio{
+    margin-top: 110px;
+}
+
+
+#imagem-grande img{  
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+
+}
+
+.category {
+    margin-bottom: 60px;
+}
+
+.category h3 {
+    font-size: 1.5em;
+    color: var(--color-orange);
+    text-transform: uppercase;
+    border-left: 5px solid var(--color-dark-green);
+    padding-left: 15px;
+    margin-bottom: 20px;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background-color: var(--color-dark-green);
+    color: var(--color-white);
+    padding: 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    display: block;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border: 3px solid transparent;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    background-color: var(--color-medium-green); /* Escurece um pouco no hover */
+    border-color: var(--color-orange);
+}
+
+.card h4 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    color: var(--color-orange);
+    text-transform: uppercase;
+}
+
+.card p {
+    font-size: 1em;
+    opacity: 0.9;
+}
+
+
+/****inserido agora */
+
+.card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.card .aluno-nome {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.85em;
+  color: #ccc;
+  font-style: italic;
+}
+
+/****inserido agora */
+
+.capitular::first-letter {
+  font-size: 400%;      /* aumenta o tamanho da primeira letra */
+  font-weight: bold;    /* deixa em negrito */
+  float: left;          /* faz a letra se destacar à esquerda */
+  line-height: 0.5;       /* ajusta a altura da linha */
+  margin-right: 5px;    /* espaço entre a letra e o texto */
+}
+
+.capitular{
+    text-align: justify;
+
+}
+
+/* Cartão de Destaque */
+ .card.highlight {
+    background-color: var(--color-orange);
+    color: var(--color-dark-green);
+    border-color: var(--color-dark-green);
+}
+
+.card.highlight h4 {
+    color: var(--color-dark-green);
+}
+
+.card.highlight:hover {
+    background-color: #E08A22; /* Laranja um pouco mais escuro */
+    border-color: var(--color-dark-green);
+} 
+
+
+.alunos-section {
+    padding: 10px;
+    flex: 1;
+    min-width: 200px;
+}
+
+
+.student-links a {
+    color: var(--color-orange);
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.student-links a:hover {
+    color: var(--color-medium-green);
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.aluno-list {
+    display: flex;
+    font-size: 0.9em;
+    justify-content:space-evenly
+}
+
+.turma{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+
+/**Cards EXTRAS E RECOMENDAÇÃOES*/
+.extra{
+    display: flex; 
+    align-items: center;
+}
+
+.extra img{
+    width: 125px;
+}
+
+.extra div{
+    margin-left: 15px;
+}
+
+.extra div span{
+    color: #ffffff;
+}
+
+.extra .aluno-nome{
+    color:white;
+}
+
+/* ------------------ Footer (Rodapé) ------------------ */
+
+    .borda {
+      height: 60px;
+      background-image: url("borda.png");
+      /* Usando o padrão de losangos */
+      background-repeat: repeat-x;
+      background-size: auto 100px;
+      /* Ajuste a altura conforme necessário */
+      background-size: contain;
+      /* O resto do estilo será no arquivo style.css */
+    }
+
+
+
+footer {
+    background-color: var(--color-dark-green);
+    color: var(--color-white);
+    padding: 30px 0;
+    /* Imagem de fundo do banner foi definida no HTML embutido */
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+
+
+.footer-logo {
+    max-height: 60px; /* Ajuste o tamanho da logo */
+    /*filter: invert(100%); /* Deixa a logo branca, se ela for escura */
+}
+
+.social-links h4 {
+    color: var(--color-orange);
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.social-links a {
+    color: var(--color-white);
+    text-decoration: none;
+    margin: 0 5px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--color-orange);
+}
+
+
+/*  Ajuste scroll - para não entrar em conflito com o header**/
+
+html {
+    scroll-behavior: smooth; /* rolagem suave nas âncoras */
+  }
+  
+  /* Garante que ao clicar no link, o título não fique escondido atrás do header fixo */
+  [id] {
+    scroll-margin-top: 140px; /* altura exata do header + margem de respiro */
+  }
+
+
+
+/* ------------------ Responsividade Básica ------------------ */
+@media (max-width: 1224px) {
+
+    /* #banner{
+
+        margin-top: 150px;
+        background-size: contain;
+        max-height: 400px;
+        margin-bottom: 30px; 
+ } */
+  
+    /* #imagem-grande .banner-inicio{
+
+       margin-top: 400px;
+    } */
+
+}
+    
+
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav {
+        margin-top: 15px;
+    }
+
+    header nav a {
+        margin: 0 10px;
+    }
+
+
+    /* .banner-inicio{
+        background-size: contain;
+        height: 200px; 
+        margin-bottom: 0;
+    } */
+
+    #imagem-grande .banner-inicio{
+        margin-top: 180px;
+        margin-bottom: 0;
+    }
+
+    #imagem-grande{
+        margin-bottom: 40px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin-bottom: 20px;
+    }
+
+     /* Garante que ao clicar no link, o título não fique escondido atrás do header fixo */
+  [id] {
+    scroll-margin-top: 250px; /* altura exata do header + margem de respiro */
+  }
+
+}
