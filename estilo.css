@@ -148,22 +148,38 @@ section{
 }
 
 .card {
-    background-color: var(--color-dark-green);
-    color: var(--color-white);
     padding: 25px;
+    background-color: var(--color-dark-green);
+    border: 3px solid transparent; 
+}
+
+
+.card, .banner-link {
+
+    color: var(--color-white);
     border-radius: 8px;
     text-decoration: none;
     transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
     display: block;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    border: 3px solid transparent;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
 }
 
-.card:hover {
+.card:hover, .banner-link:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     background-color: var(--color-medium-green); /* Escurece um pouco no hover */
     border-color: var(--color-orange);
+}
+
+
+.banner-link:hover{
+    border: 2px solid #E08A22;  
+}
+
+.banner-inicio:hover{
+    border-radius: 50px;
+    filter: contrast(125%);
+
 }
 
 .card h4 {
